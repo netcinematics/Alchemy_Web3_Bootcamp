@@ -1,0 +1,28 @@
+{
+  "name": "web3_boilerplate_au_001",
+  "version": "1.0.0",
+  "description": "Minimum Web 3 to Smart Contract. Alchemy Universitychemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netcinematics/web3_boilerplate_au_001.git"
+  },
+  "keywords": [],
+  "author": "spazefalcon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netcinematics/web3_boilerplate_au_001/issues"
+  },
+  "homepage": "https://github.com/netcinematics/web3_boilerplate_au_001#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.12.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

@@ -1,0 +1,24 @@
+ALCHEMY NOTES
+
+
+Put learning examples on Medium:
+
+TITLE:
+
+AlchemyU | Week1_Reflection | ERC721
+
+
+PAGE FORMAT:
+
+~ PROJECT 001: ERC721
+> Description
+> Challenges
+> Questions I had
+> Things I learned
+
+
+STARTED FROM SCRATCH. The BOILERPLATE CONTRACT:
+Contract deployed to address: 0x9A9A1DD4632375F1934BF7065c8Af036EF772EA3
+
+The second contract for interactions:
+Contract deployed to ADDRESS: 0x7403751B80266e2C2BBe31F1fa0ce26945Dca3C1
