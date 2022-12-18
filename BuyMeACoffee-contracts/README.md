@@ -30,13 +30,30 @@ Had to delete version in Hardhat install prompt to get it to install  @etherspro
 
 >npx hardhat run scripts/deploy.js
 
-deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+deployed metamask: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
-0x79A73750669f796D915d29f0689eE30d1C6e5c1D
+deployed alchemy(?) on goerli: 0x79A73750669f796D915d29f0689eE30d1C6e5c1D
 
 > npm install dotenv
 
 create env
+
+> npx hardhat run scripts/withdraw.js
+
+- DEPLOY to Metamask and Alchemy (goerli)
+
+
+# REPLIT FRONTEND
+
+- set contract address
+
+- confirm ABI
+
+
+
+
+
+
 
 //--------------------------------------
 Try running some of the following tasks:
