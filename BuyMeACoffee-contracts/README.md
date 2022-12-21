@@ -3,7 +3,7 @@ NOTES - how to create and run this project...
 mkdir BuyMeACoffee-contracts
 cd BuyMeACoffee-contracts
 
->npm init -y
+>npm init -y  //package.json
 
 >npm install --save-dev hardhat
 
