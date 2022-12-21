@@ -32,6 +32,8 @@ Had to delete version in Hardhat install prompt to get it to install  @etherspro
 
 deployed metamask: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
+> npx hardhat run scripts/deploy.js --network goerli
+
 deployed alchemy(?) on goerli: 0x79A73750669f796D915d29f0689eE30d1C6e5c1D
 
 > npm install dotenv
