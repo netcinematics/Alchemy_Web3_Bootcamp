@@ -15,6 +15,7 @@ pragma solidity ^0.8.17;
 // https://replit.com/@spazefalcon/BuyMeACoffee-Solidity-DeFi-Tipping-app#pages/index.jsx
 // ReDeployed: UPDATED ABI...
 // REPLIT WALLET CONNECT DOC: https://blog.replit.com/solidity
+// https://wiki.polygon.technology/docs/develop/replit/
 
 contract BuyMeACoffee {
     // Event to emit when a Memo is created.
