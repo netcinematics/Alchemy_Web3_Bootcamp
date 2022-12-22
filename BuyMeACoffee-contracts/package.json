@@ -23,7 +23,7 @@
     "@types/mocha": "^9.1.0",
     "chai": "^4.2.0",
     "ethers": "^5.4.7",
-    "hardhat": "^2.12.2",
+    "hardhat": "^2.12.4",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.8.1",
     "ts-node": "^10.9.1",
