@@ -12,10 +12,28 @@ contract ChainBattles is ERC721URIStorage  {
     Counters.Counter private _tokenIds; 
 
     mapping(uint256 => uint256) public tokenIdToLevels;
+    //Add Struct for more CharacterAttributes.
+    struct HeroAbilityClass {
+        uint256 idx;
+        uint256 aLevel;
+        uint256 aSpeed;
+        uint256 aStrength;
+        uint256 aLife;
+    }
+    HeroAbilityClass[] private heroAbilitySet;
+
+    function setAbility() public {
+        HeroAbilityClass memory heroAbility = HeroAbilityClass(1,2,3,4,5);
+        heroAbilitySet.push(heroAbility);
+    }
+
+    function getAbility() public view returns (uint256) {
+        return heroAbilitySet[0].aLevel;
+    }
 
     constructor() ERC721 ("Chain Battles", "CBTLS"){
-
     }
+
 
     function generateCharacter(uint256 tokenId) public view returns(string memory){
 
@@ -69,7 +87,60 @@ contract ChainBattles is ERC721URIStorage  {
         uint256 newItemId = _tokenIds.current();
         _safeMint(msg.sender, newItemId);
         tokenIdToLevels[newItemId] = 0;
+
+        setRandomAttributes(newItemId); //CHALLENGE SOLUTION.
+
         _setTokenURI(newItemId, getTokenURI(newItemId));
     }
+
+    function setRandomAttributes(uint256 itemId) private {
+        require(itemId>0,"bad parameter");
+        // require(heroAbilitySet[itemId]!= HeroAbilityClass,"bad lookup");
+
+        uint256 rand1 = unsafeRandomNUM(1);
+        uint256 rand2 = unsafeRandomNUM(2);
+        uint256 rand3 = unsafeRandomNUM(3);
+        uint256 rand4 = unsafeRandomNUM(4);
+
+        HeroAbilityClass memory heroAbility = HeroAbilityClass(itemId,rand1,rand2,rand3,rand4);
+        heroAbilitySet.push(heroAbility);
+
+    }
+
+    function unsafeRandomNUM(uint number) public view returns(uint){
+        return uint(blockhash(block.number-1)) % number; //RANDOM-BLOCK-HASH
+    }
+
+
+
+//     function random(uint number) public view returns(uint){ //RANDOM-BLOCK-DIFFICULTY
+//         return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty,  
+//         msg.sender))) % number;
+//     }
+
+// contract RandomNumbers{ //INCREMENTING RANDOM NUM.
+//     uint initialNumber;
+//     function createRandom(uint number) public returns(uint){
+//         return uint(keccak256(abi.encodePacked(initialNumber++))) % number;
+//     }
+// }
+
+// contract RandomNumberarray{
+//     function random(uint[] memory _myArray) public view returns(uint[] memory){
+//         uint a = _myArray.length; 
+//         uint b = _myArray.length;
+//         for(uint i = 0; i< b ; i++){
+//             uint randNumber =(uint(keccak256      
+//             (abi.encodePacked(block.timestamp,_myArray[i]))) % a)+1;
+//             uint interim = _myArray[randNumber - 1];
+//             _myArray[randNumber-1]= _myArray[a-1];
+//             _myArray[a-1] = interim;
+//             a = a-1;
+//         }
+//         uint256[] memory result;
+//         result = _myArray;       
+//         return result;        
+//     }
+// }   
 
 }
