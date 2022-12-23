@@ -75,13 +75,20 @@ https://testnets.opensea.io/assets/mumbai/0x9a9a1dd4632375f1934bf7065c8af036ef77
 
 # CHALLENGE - add attributes
 
-O - Change tokenIdToLevels[] mapping to struct :
-O - Level
-O - Speed
-O - Strength
-O - Life
+X - Change tokenIdToLevels[] mapping to struct :
+X - Level
+X - Speed
+X - Strength
+X - Life
 
-O - randomize the values.
+X - randomize the values.
+
+//With changes.
+> npx hardhat run scripts/deploy.js --network mumbai
+0xE14438a227f4b3252FBEc7378bA1D5F3421ce27E
+> npx hardhat verify --network mumbai 0xE14438a227f4b3252FBEc7378bA1D5F3421ce27E
+Successfully verified contract ChainBattles on Etherscan.
+https://mumbai.polygonscan.com/address/0xE14438a227f4b3252FBEc7378bA1D5F3421ce27E#code
 
 ## ----
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
