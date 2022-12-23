@@ -36,12 +36,15 @@ npm install --save-dev "hardhat@^2.11.1" "@nomicfoundation/hardhat-toolbox@^2.0.
 
 > npm install --save @openzeppelin/contracts
 
+> npm install --save @nomiclabs/hardhat-waffle
+
 CTRL + F5 - compile all hotkey //didnt work
 
 > npx hardhat compile  //compile all
 
+> npx hardhat run scripts/deploy.js --network mumbai
 
-
+success: 0x9A9A1DD4632375F1934BF7065c8Af036EF772EA3
 
 # Connect to Mumbai in hardhat.config.js
 module.exports = {
@@ -54,6 +57,33 @@ module.exports = {
   },
 };
 
+> npx hardhat verify --network mumbai 0x9A9A1DD4632375F1934BF7065c8Af036EF772EA3
+
+
+# POLYGONSCAN > Contract > Write Contract > Connect Wallet > Mint > Write
+
+[ethjs-query] while formatting outputs from RPC '{"value":{"code":-32603,"data":{"code":-32000,"message":"transaction underpriced"}}}'
+
+SOLUTION: it worked the next day after ... being more patient. : )
+
+0x9a9a1dd4632375f1934bf7065c8af036ef772ea3
+
+https://testnets.opensea.io/collection/chain-battles-1zlzgrjvn0
+https://testnets.opensea.io/assets/mumbai/0x9a9a1dd4632375f1934bf7065c8af036ef772ea3/1
+
+> Level 1 - from 0 to 1.
+
+# CHALLENGE - add attributes
+
+O - Change tokenIdToLevels[] mapping to struct :
+O - Level
+O - Speed
+O - Strength
+O - Life
+
+O - randomize the values.
+
+## ----
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
 Try running some of the following tasks:
