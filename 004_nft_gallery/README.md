@@ -19,6 +19,18 @@ Add an icon next to the NFT addresses to make it easy for people viewing your si
 Add a pagination system to view more than 100 NFTs, by using the pageKey parameter from the getNFTs endpoint.
 
 
+ADDED~TOUCH for EXTRA~CREDIT:
+- tailwind: MEDIA QUERIES in tailwind.config.js | max NOT min
+- CUSTOM: MEDIA QUERY | flex-col and items-center, remove w-1/4
+- tailwind: full screen | min-h-screen NOT h-screen
+- tailwind: layout:  remove w-5/6 and flex-wrap | add width to Card and Buttons w/Radius.
+- next.js: Home.getInitialProps = async (ctx) => {} | init front-load
+- CUSTOM NAV: 'BOOK' and 'PAGE'. 
+- CUSTOM SEARCH: input w/ LOOKUP button.
+- CUSTOM PAGINATION (3): using pageKey parameter from getNFTs.
+- CUSTOM: Header,Content,Footer to CARD and APP.
+
+
 
 # Next.js + Tailwind CSS Example
 
