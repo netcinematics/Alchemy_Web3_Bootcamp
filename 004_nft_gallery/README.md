@@ -13,6 +13,12 @@
 
 > npm install dotenv //(?)
 
+CHALLENGES:
+
+Add an icon next to the NFT addresses to make it easy for people viewing your site to copy the contract address.
+Add a pagination system to view more than 100 NFTs, by using the pageKey parameter from the getNFTs endpoint.
+
+
 
 # Next.js + Tailwind CSS Example
 

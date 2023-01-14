@@ -70,9 +70,9 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center py-8 gap-y-3">
+    <div className="flex flex-col items-center min-h-screen  justify-center py-8 gap-y-3 bg-black">
       <div className="flex flex-col w-full justify-center items-center gap-y-2">
-        <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
+        {/* <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
         <input type={"text"} placeholder="Add the collection address"></input>
         <label className="text-gray-600 "><input onChange={(e)=>{setFetchForCollection(e.target.checked)}} type={"checkbox"} className="mr-2"></input>Fetch for collection</label>
         <button className={"disabled:bg-slate-500 text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
@@ -82,7 +82,7 @@ const Home = () => {
               fetchNFTsForCollection()
             } else { fetchNFTs() }
           }
-        }>Let's go! </button>
+        }>Let's go! </button> */}
       </div>
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
         {
