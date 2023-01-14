@@ -10,15 +10,14 @@ import { useState } from 'react'
 
 
 
-const Home = () => {
-  
+const Home = (foo) => {
+  console.log("init",foo)
   const [wallet, setWalletAddress] = useState("");
   const [collection, setCollectionAddress] = useState("");
   const [NFTs, setNFTs] = useState([]);
   const [fetchForCollection, setFetchForCollection]=useState(false);
 
   const fetchNFTs = async() => {
-
     
     // const PRIVATE_KEY = process.env.PRIVATE_KEY;
  
@@ -68,36 +67,73 @@ const Home = () => {
       }
     // }
   }
+  
 
   return (
-    <div className="flex flex-col items-center min-h-screen  justify-center py-8 gap-y-3 bg-black">
-      <div className="flex flex-col w-full justify-center items-center gap-y-2">
-        {/* <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
-        <input type={"text"} placeholder="Add the collection address"></input>
-        <label className="text-gray-600 "><input onChange={(e)=>{setFetchForCollection(e.target.checked)}} type={"checkbox"} className="mr-2"></input>Fetch for collection</label>
-        <button className={"disabled:bg-slate-500 text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
-           () => {
-            console.log("click",fetchForCollection)
-            if (fetchForCollection) {
-              fetchNFTsForCollection()
-            } else { fetchNFTs() }
+    <div class="flex flex-col h-screen justify-between">
+    <header class="h-10 bg-red-500">Header</header>
+    <main class="mb-auto   h-10 bg-green-500">Content:
+      {/*BUTTON-FRAME*/}
+      <div className="flex flex-col items-center justify-center py-6 gap-y-3 bg-black">
+        <div className="flex w-full justify-center items-center gap-x-2">
+          {/* <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
+          <input type={"text"} placeholder="Add the collection address"></input>
+          <label className="text-gray-600 "><input onChange={(e)=>{setFetchForCollection(e.target.checked)}} type={"checkbox"} className="mr-2"></input>Fetch for collection</label>
+          <button className={"disabled:bg-slate-500 text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
+            () => {
+              console.log("click",fetchForCollection)
+              if (fetchForCollection) {
+                fetchNFTsForCollection()
+              } else { fetchNFTs() }
+            }
+          }>Let's go! </button> */}
+          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
+            () => {
+              // console.log("click",fetchForCollection)
+              // if (fetchForCollection) {
+                fetchNFTsForCollection()
+              // } else { fetchNFTs() }
+            }
+          }>NFT~BOOK</button>
+
+          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
+            () => {
+              fetchNFTs()
+            }
+          }>NEXT~PAGE</button>
+
+
+        </div>
+        {/*CARD-FRAME*/}
+        <div className='flex sm:flex-col sm:items-center gap-y-12 mt-6 gap-x-2 justify-center'>
+          {
+            //sm:flex-direction:column; sm:align-items:center;  sm:items-stretch
+            NFTs.length && NFTs.map(nft => {
+              return (
+                <NFTCard nft={nft}></NFTCard>
+              )
+            })
           }
-        }>Let's go! </button> */}
-      </div>
-      <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
-        {
-          NFTs.length && NFTs.map(nft => {
-            return (
-              <NFTCard nft={nft}></NFTCard>
-            )
-          })
-        }
-      </div>
+        </div>
 
 
-    </div>
+      </div>
+      </main>
+      <footer class="h-10 bg-blue-500">Footer</footer>
+    </div>      
   )
+
+
 }
 
+Home.getInitialProps = async (ctx) => {
+  // FRONT-LOAD with CONTENT.
+  const data = "hullowurld"; //await User.findOne(ctx.query.id)
+  console.log('init1')
+  // return props
+  return {
+      data
+  }
+}
 export default Home
 
