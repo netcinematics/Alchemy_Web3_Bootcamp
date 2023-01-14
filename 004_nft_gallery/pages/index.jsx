@@ -70,12 +70,9 @@ const Home = (foo) => {
   
 
   return (
-    <div class="flex flex-col h-screen justify-between">
-    <header class="h-10 bg-red-500">Header</header>
-    <main class="mb-auto   h-10 bg-green-500">Content:
-      {/*BUTTON-FRAME*/}
-      <div className="flex flex-col items-center justify-center py-6 gap-y-3 bg-black">
-        <div className="flex w-full justify-center items-center gap-x-2">
+    <div class="flex flex-col h-screen overflow-hidden justify-between">
+    <header class="h-15 bg-black ">{/* PAGE Header */}
+    <div className="flex w-full justify-center sm:items-center gap-x-2">{/*BUTTON-FRAME*/}
           {/* <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
           <input type={"text"} placeholder="Add the collection address"></input>
           <label className="text-gray-600 "><input onChange={(e)=>{setFetchForCollection(e.target.checked)}} type={"checkbox"} className="mr-2"></input>Fetch for collection</label>
@@ -87,7 +84,7 @@ const Home = (foo) => {
               } else { fetchNFTs() }
             }
           }>Let's go! </button> */}
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
+          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
             () => {
               // console.log("click",fetchForCollection)
               // if (fetchForCollection) {
@@ -96,7 +93,7 @@ const Home = (foo) => {
             }
           }>NFT~BOOK</button>
 
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
+          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
             () => {
               fetchNFTs()
             }
@@ -104,7 +101,12 @@ const Home = (foo) => {
 
 
         </div>
-        {/*CARD-FRAME*/}
+
+    </header>
+    <main class="mb-auto h-10 bg-green-500">{/*Content:*/}
+      
+      <div className="flex flex-col items-center justify-center gap-y-3 bg-black">
+             {/*CARD-FRAME*/}
         <div className='flex sm:flex-col sm:items-center gap-y-12 mt-6 gap-x-2 justify-center'>
           {
             //sm:flex-direction:column; sm:align-items:center;  sm:items-stretch

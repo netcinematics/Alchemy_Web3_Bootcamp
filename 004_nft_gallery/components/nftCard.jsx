@@ -2,10 +2,14 @@ export const NFTCard = ({ nft }) => {
 
     return (
 
-        <div class="flex flex-col h-screen justify-between">
-            <header class="h-10 bg-red-500">Header</header>
-            <main class="mb-auto h-10 bg-green-500">Content:
-                <div className="md:w-1/4 flex flex-col bg-indigo-500 rounded-md ">
+        <div class="flex flex-col h-screen justify-between">{/*CARD-HEADER-FRAME*/}
+            <header class="h-10 flex flex-row bg-sky-500 rounded-lg">
+                    <h2 className="text-xl align-left rounded-md text-gray-800">{nft.title}</h2>
+                    <p className="text-gray-600 align-center ">Id: {nft.id.tokenId}</p>
+                    {/* <p className="text-gray-600" >{nft.contract.address}</p> */}
+            </header>
+            <main class="mb-auto h-10 bg-green-500 ">{/*CARD-CONTENT-FRAME*/}{/* overflow-auto */}
+                <div className="md:w-1/4 flex flex-col bg-indigo-500 rounded-md"> {/*  self-stretch */}
                 <div className="rounded-md">
                     <img className="object-cover h-128 w-full rounded-t-md" src={nft.media[0].gateway} ></img>
                 </div>

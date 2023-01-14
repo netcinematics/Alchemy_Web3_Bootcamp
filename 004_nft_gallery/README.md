@@ -25,10 +25,11 @@ ADDED~TOUCH for EXTRA~CREDIT:
 - tailwind: full screen | min-h-screen NOT h-screen
 - tailwind: layout:  remove w-5/6 and flex-wrap | add width to Card and Buttons w/Radius.
 - next.js: Home.getInitialProps = async (ctx) => {} | init front-load
-- CUSTOM NAV: 'BOOK' and 'PAGE'. 
-- CUSTOM SEARCH: input w/ LOOKUP button.
-- CUSTOM PAGINATION (3): using pageKey parameter from getNFTs.
-- CUSTOM: Header,Content,Footer to CARD and APP.
+- CUSTOM: NAV: 'BOOK' and 'PAGE'. 
+- CUSTOM: SEARCH: input w/ LOOKUP button.
+- CUSTOM: PAGINATION (3): using pageKey parameter from getNFTs.
+- CUSTOM: Header,Content,Footer (frames) for CARD and APP.
+- CUSTOM: FLEX GROW. 
 
 
 
