@@ -19,8 +19,9 @@ Add an icon next to the NFT addresses to make it easy for people viewing your si
 Add a pagination system to view more than 100 NFTs, by using the pageKey parameter from the getNFTs endpoint.
 
 
-ADDED~TOUCH for EXTRA~CREDIT:
-- tailwind: MEDIA QUERIES in tailwind.config.js | max NOT min
+DEV STEPS  - for EXTRA~CREDIT:
+- SEMANTIC HTML: Header,Content,Footer (html frames) for CARD and APP.
+- tailwind: MEDIA QUERIES | Phone PC | tailwind.config.js | max NOT min
 - CUSTOM: MEDIA QUERY | flex-col and items-center, remove w-1/4
 - tailwind: full screen | min-h-screen NOT h-screen
 - tailwind: layout:  remove w-5/6 and flex-wrap | add width to Card and Buttons w/Radius.
@@ -28,10 +29,19 @@ ADDED~TOUCH for EXTRA~CREDIT:
 - CUSTOM: NAV: 'BOOK' and 'PAGE'. 
 - CUSTOM: SEARCH: input w/ LOOKUP button.
 - CUSTOM: PAGINATION (3): using pageKey parameter from getNFTs.
-- CUSTOM: Header,Content,Footer (frames) for CARD and APP.
-- CUSTOM: FLEX GROW. 
+- CUSTOM: FLEX GROW.
+- COPY-CLIPBOARD0x : https://learnjsx.com/category/4/posts/nextjs-copy-clipboard 
+- PAGE NAV tailwind: 
+- https://tailwindui.com/components/application-ui/navigation/pagination
+- https://dev.to/larainfo/tailwind-css-simple-pagination-4m3p
+- PAGE NAV next.js: https://nextjs.org/learn/basics/navigate-between-pages
+- CUSTOM: CAROUSEL COMPONENT: from TAILWIND STACKED-CARD component.
+- https://v1.tailwindcss.com/components/cards#stacked
+- IMPROVEMENT: add flex-1 to the CARD. Tricky.
 
 
+EXTRA-CREDIT:
+https://nextjs.org/learn/basics/create-nextjs-app
 
 # Next.js + Tailwind CSS Example
 
