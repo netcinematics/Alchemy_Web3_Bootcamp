@@ -1,12 +1,14 @@
 import dynamic from "next/dynamic"
 
-export const NFTCard = ({ nft }) => {
+export const NFTCard = ({ nft },cardView) => {
     const textToCopy = "0x134..skj"
     const CC = dynamic(() => import("../components/copyClipboard").then(mod => mod.CopyClipboard), { ssr: false })
    
+    // console.log("state",cardView);//, setView)
+
     return (
 
-        <div class="flex flex-1 flex-col h-screen justify-between bg-zinc-800">{/*CARD-FRAME*/}
+        <div class="flex flex-1 flex-col self-auto mb-6 justify-between bg-zinc-800">{/*CARD-FRAME*/}
             <header class="flex justify-between h-200 bg-sky-500 rounded-lg p-2">
                     <h2 className="text-xl align-left rounded-md text-gray-800">{nft.title}</h2>
                     <p className="text-gray-600 align-center ">&nbsp;</p>

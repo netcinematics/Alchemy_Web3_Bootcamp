@@ -16,6 +16,7 @@ const Home = (foo) => {
   const [collection, setCollectionAddress] = useState("");
   const [NFTs, setNFTs] = useState([]);
   const [fetchForCollection, setFetchForCollection]=useState(false);
+  const [cardView, setView] = useState("default");
 
   const fetchNFTs = async() => {
     
@@ -105,17 +106,15 @@ const Home = (foo) => {
         </div>
 
     </header>
-    <main class="mb-auto h-10 bg-green-500">{/*Content:*/}
+    <main class="mb-auto h-10 bg-green-500 h-full">{/*Content:*/}
       
-      <div className="flex flex-col items-center justify-center gap-y-3 bg-black">
-             {/*CARD-FRAME*/}
-        <div className='flex sm:flex-col sm:items-center gap-y-12 mt-6 gap-x-2 justify-center overflow-x-scroll'>
-        {/* <div className=''> */}
+      <div className="flex flex-col h-full items-center justify-center gap-y-3 bg-black">
+             {/*CARD-FRAME*/} {/*overflow-x-scroll*/}
+        <div className='flex sm:flex-col h-full sm:items-center items-stretch gap-y-12 mt-6 gap-x-2 justify-center'>
           {
-            //sm:flex-direction:column; sm:align-items:center;  sm:items-stretch
             NFTs.length && NFTs.map(nft => {
               return (
-                <NFTCard nft={nft}></NFTCard>
+                <NFTCard nft={nft} cardView={cardView}></NFTCard>
               )
             })
           }
@@ -124,7 +123,7 @@ const Home = (foo) => {
 
       </div>
       </main>
-      <footer class="h-12 bg-blue-500 flex justify-center py-2">{/*Footer*/}
+      <footer class="h-12 bg-blue-500 flex justify-center py-2 border-t-4 border-t-black">{/*Footer*/}
         <div class="flex items-center space-x-1">
           <a href="#" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
