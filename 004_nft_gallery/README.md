@@ -37,7 +37,7 @@ DEV STEPS  - for EXTRA~CREDIT:
 - PAGE NAV next.js: https://nextjs.org/learn/basics/navigate-between-pages
 - CUSTOM: CAROUSEL COMPONENT: from TAILWIND STACKED-CARD component.
 - https://v1.tailwindcss.com/components/cards#stacked
-- IMPROVEMENT: add flex-1 to the CARD. Tricky.
+- IMPROVEMENT: add flex-1 and self-auto to the CARD. with items-stretch Tricky.
 
 
 EXTRA-CREDIT:

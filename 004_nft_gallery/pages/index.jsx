@@ -87,7 +87,7 @@ const Home = (foo) => {
           }>Let's go! </button> */}
           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
             () => { fetchNFTsForCollection() }
-          }>NFT~BOOK</button>
+          }>NFT~BOOKS</button>
 
           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
           onClick={ ()=>{ fetchNFTs() }
@@ -125,13 +125,13 @@ const Home = (foo) => {
       </main>
       <footer class="h-12 bg-blue-500 flex justify-center py-2 border-t-4 border-t-black">{/*Footer*/}
         <div class="flex items-center space-x-1">
-          <a href="#" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+          <a href="#" class="px-4 py-2 text-gray-500 bg-gray-300 rounded-md  hover:bg-blue-400 hover:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
               </svg>
           </a>
 
-          <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">
+          {/* <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">
               1
           </a>
           <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">
@@ -139,7 +139,7 @@ const Home = (foo) => {
           </a>
           <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">
               3
-          </a>
+          </a> */}
           <a href="#" class="px-4 py-2 text-gray-500 bg-gray-300 rounded-md hover:bg-blue-400 hover:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
