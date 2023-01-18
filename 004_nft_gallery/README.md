@@ -20,24 +20,37 @@ Add a pagination system to view more than 100 NFTs, by using the pageKey paramet
 
 
 DEV STEPS  - for EXTRA~CREDIT:
-- SEMANTIC HTML: Header,Content,Footer (html frames) for CARD and APP.
-- tailwind: MEDIA QUERIES | Phone PC | tailwind.config.js | max NOT min
-- CUSTOM: MEDIA QUERY | flex-col and items-center, remove w-1/4
-- tailwind: full screen | min-h-screen NOT h-screen
-- tailwind: layout:  remove w-5/6 and flex-wrap | add width to Card and Buttons w/Radius.
-- next.js: Home.getInitialProps = async (ctx) => {} | init front-load
-- CUSTOM: NAV: 'BOOK' and 'PAGE'. 
-- CUSTOM: SEARCH: input w/ LOOKUP button.
-- CUSTOM: PAGINATION (3): using pageKey parameter from getNFTs.
-- CUSTOM: FLEX GROW.
-- COPY-CLIPBOARD0x : https://learnjsx.com/category/4/posts/nextjs-copy-clipboard 
-- PAGE NAV tailwind: 
-- https://tailwindui.com/components/application-ui/navigation/pagination
-- https://dev.to/larainfo/tailwind-css-simple-pagination-4m3p
-- PAGE NAV next.js: https://nextjs.org/learn/basics/navigate-between-pages
-- CUSTOM: CAROUSEL COMPONENT: from TAILWIND STACKED-CARD component.
-- https://v1.tailwindcss.com/components/cards#stacked
-- IMPROVEMENT: add flex-1 and self-auto to the CARD. with items-stretch Tricky.
+x - SEMANTIC HTML: Header,Content,Footer (html frames) for CARD and APP.
+x - tailwind: MEDIA QUERIES | Phone PC | tailwind.config.js | max NOT min
+x - CUSTOM: MEDIA QUERY | flex-col and items-center, remove w-1/4
+x - tailwind: full screen | min-h-screen NOT h-screen
+x - tailwind: layout:  remove w-5/6 and flex-wrap | add width to Card and Buttons w/Radius.
+x - next.js: Home.getInitialProps = async (ctx) => {} | init front-load
+x - CUSTOM: NAV: 'BOOK' and 'PAGE'. 
+x - CUSTOM: SEARCH: input w/ LOOKUP button.
+x - CUSTOM: PAGINATION (3): using pageKey parameter from getNFTs.
+x - CUSTOM: FLEX GROW.
+x - COPY-CLIPBOARD0x : https://learnjsx.com/category/4/posts/nextjs-copy-clipboard 
+x - PAGE NAV tailwind: 
+x - https://tailwindui.com/components/application-ui/navigation/pagination
+x - https://dev.to/larainfo/tailwind-css-simple-pagination-4m3p
+x - PAGE NAV next.js: https://nextjs.org/learn/basics/navigate-between-pages
+x - CUSTOM: CAROUSEL COMPONENT: from TAILWIND STACKED-CARD component.
+x - https://v1.tailwindcss.com/components/cards#stacked
+x - IMPROVEMENT: add flex-1 and self-auto to the CARD. with items-stretch Tricky.
+
+# NEED BETTER DATA - for Carousel-Pagination and for WEB3NFTBOOK!
+o - TESTNET: switch to POLYGON MUMBAI TESTNET!
+o - NEXT.js.localenv ?
+o - DEPLOY VERCEL
+o - CREATE NEW BOOK - for TESTNET Polygon...
+o - CAROUSEL load/click behavior.
+
+# I've been on Alchemy for over 1yr already! Looking back, days on Alchemy 467!
+
+>npm install alchemy-sdk //suggested by dashboard.
+
+
 
 
 EXTRA-CREDIT:

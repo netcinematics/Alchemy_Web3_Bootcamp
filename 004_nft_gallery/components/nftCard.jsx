@@ -8,8 +8,8 @@ export const NFTCard = ({ nft },cardView) => {
 
     return (
 
-        <div class="flex flex-1 flex-col self-auto mb-6 rounded-md justify-between bg-zinc-800">{/*CARD-FRAME*/}
-            <header class="flex justify-between h-200 bg-sky-500 rounded-lg p-1 pl-2">
+        <div className="flex flex-1 flex-col self-auto mb-6 rounded-md justify-between bg-zinc-800">{/*CARD-FRAME*/}
+            <header className="flex justify-between h-200 bg-sky-500 rounded-lg p-1 pl-2">
                     <h2 className="text-lg align-left rounded-md text-gray-800">{nft.title}</h2>
                     <p className="text-gray-600 align-center ">&nbsp;</p>
                     <div>{/*icon*/}
@@ -17,7 +17,7 @@ export const NFTCard = ({ nft },cardView) => {
                     </div>
                     {/* <p className="text-gray-600" >{nft.contract.address}</p> */}
             </header>
-            <main class="flex mt-1 mx-1 mb-auto bg-zinc-800">{/*CARD-CONTENT-FRAME*/}{/* overflow-auto */}
+            <main className="flex mt-1 mx-1 mb-auto bg-zinc-800">{/*CARD-CONTENT-FRAME*/}{/* overflow-auto */}
                 <div className="flex flex-col bg-indigo-500 rounded-md"> {/*  self-stretch */}
                     <div className="rounded-md p-1">
                         <img className="object-cover shadow-md h-128 w-full rounded-md" src={nft.media[0].gateway} ></img>
@@ -36,7 +36,7 @@ export const NFTCard = ({ nft },cardView) => {
 
                 </div>
             </main>
-        <footer class="h-8 m-1 p-1 text-sm bg-blue-500 rounded-md bg-blue-500">Footer</footer>
+        <footer className="h-8 m-1 p-1 text-sm bg-blue-500 rounded-md bg-blue-500">Footer</footer>
     </div>
 
     )
