@@ -45,13 +45,16 @@ x - NEXT.js.localenv ?
 x - CAROUSEL load/click behavior.
 
 # I've been on Alchemy for over 1yr already! Looking back, days on Alchemy 467!
-
+# GALLERY INTERACTION EXAMPLE:
+x - https://beta.reactjs.org/learn/adding-interactivity
+x - CUSTOM COMPONENT: Next.js - gallery navigation.
+x - DEEPDIVE: Next.js Routing and React LINK pages.
+x - POC - separate sandbox to TEST behavior.
+x - added loop around index capability.
 o - DEPLOY VERCEL
 o - CREATE NEW BOOK - for TESTNET Polygon...
 
-o - GALLERY INTERACTION EXAMPLE:
-https://beta.reactjs.org/learn/adding-interactivity
-
+o - 
 
 >npm install alchemy-sdk //suggested by dashboard.
 

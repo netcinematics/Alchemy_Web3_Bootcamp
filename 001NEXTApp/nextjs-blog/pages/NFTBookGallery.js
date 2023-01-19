@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { sculptureList } from './data.js';
 
-export default function Gallery() {
+export default function GalleryBook() {
     const [index, setIndex] = useState(0);
     const [showMore, setShowMore] = useState(false);
   
@@ -32,8 +32,16 @@ export default function Gallery() {
     //   }];
 
 
+    function handleLastClick() {
+        console.log("TEST1",sculptureList.length,index)
+      if(index<1){ setIndex(sculptureList.length-1)} //loop around index
+      else { setIndex(index - 1); }
+    }
+
     function handleNextClick() {
-      setIndex(index + 1);
+      console.log("TEST2",sculptureList.length,index)
+      if(index >= sculptureList.length-1){ setIndex(0); } //loop around index        
+      else { setIndex(index + 1); }
     }
   
     function handleMoreClick() {
@@ -42,7 +50,10 @@ export default function Gallery() {
   
     let sculpture = sculptureList[index];
     return (
-      <>
+      <>        
+      <button onClick={handleLastClick}>
+      Last
+    </button>
         <button onClick={handleNextClick}>
           Next
         </button>

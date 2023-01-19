@@ -1,9 +1,27 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css';
+import GalleryBook from './NFTBookGallery';
 
 export default function Home() {
   return (
     <div className={styles.container}>
+
+    <ul>
+      <li>
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/about">About Us</Link>
+      </li>
+      <li>
+        <Link href="/blog/hello-world">Blog Post</Link>
+      </li>
+    </ul>
+
+
+      <GalleryBook />
+
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
