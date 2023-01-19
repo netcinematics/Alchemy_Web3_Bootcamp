@@ -18,11 +18,39 @@ const Home = (foo) => {
   const [wallet, setWalletAddress] = useState("");
   const [collection, setCollectionAddress] = useState("");
   const [NFTs, setNFTs] = useState([]);
+  // let NFTs = []; 
+  // const setNFTs = (nftz) => {
+  //   debugger;
+  //   NFTs = nftz;
+  // }
   const [fetchForCollection, setFetchForCollection]=useState(false);
-  const [cardView, setView] = useState("default");
+
+  //Pagination Variables.
+  let viewNum = 3; //number of items in view screen.
+  let viewIndex = 0; //first item in view
+  const [viewPage, setPage] = useState([]); //items to view
+
+  const updateViewSet = (newIndex) => {
+    debugger;
+    if(!NFTs.length){ return }
+    if(newIndex<0){viewIndex = 0}
+    else if (newIndex >= NFTs.length){ 
+      if(NFTs.length>=viewNum){ viewIndex = NFTs.length-viewNum;} 
+      else {viewIndex = 0}
+    } else {viewIndex = newIndex} //error trap
+
+    const newView = [];
+    if(NFTs[viewIndex]){newView.push(new Object(NFTs[viewIndex]))}else{newView.push({})}
+    if(NFTs[viewIndex+1]){newView.push(new Object(NFTs[viewIndex+1]))}else{newView.push({})}
+    if(NFTs[viewIndex+2]){newView.push(new Object(NFTs[viewIndex+2]))}else{newView.push({})}
+    // setPage(newView);
+    // return [NFTs[newIndex],NFTs[newIndex+1],NFTs[newIndex+2]]
+
+  }
+
 
   const fetchNFTsPolygon = async() => {
-    debugger;
+    debugger; 
     // const aKey = process.env.NEXT_PUBLIC_ANALYTICS_ID;
     // const PRIVATE_KEY = process.env.PRIVATE_KEY;
     // networks: {
@@ -59,14 +87,15 @@ const Home = (foo) => {
   
     if (nfts) {
       console.log("nfts:", nfts)
-      setNFTs(nfts.ownedNfts)
+      setNFTs(nfts.ownedNfts);
+      setTimeout(function(){ updateViewSet(0)},100);
     }
 
 
   }
 
   const fetchNFTs = async() => {
-
+    // debugger;
     let nfts; 
     console.log("fetching nfts");
     const api_key = "A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM"
@@ -90,7 +119,10 @@ const Home = (foo) => {
   
     if (nfts) {
       console.log("nfts:", nfts)
+      // debugger;
       setNFTs(nfts.ownedNfts)
+      console.log("teststate1",NFTs.length)
+      setTimeout(function(){ updateViewSet(0)},100);
     }
   }
 
@@ -111,6 +143,7 @@ const Home = (foo) => {
       if (nfts) {
         console.log("NFTs in collection:", nfts)
         setNFTs(nfts.nfts)
+        // updateViewSet(0);
       }
     // }
   }
@@ -132,7 +165,7 @@ const Home = (foo) => {
             }
           }>Let's go! </button> */}
           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
-            () => { fetchNFTsForCollection() }
+            () => { fetchNFTsForCollection(); }
           }>NFT~BOOKS</button>
 
           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
@@ -156,13 +189,33 @@ const Home = (foo) => {
       
       <div className="flex flex-col h-full items-center justify-center gap-y-3 bg-black">
              {/*CARD-FRAME*/} {/*overflow-x-scroll*/}
-        <div className='flex sm:flex-col h-full sm:items-center items-stretch gap-y-8 mt-6 gap-x-2 justify-center'>
+        <div className='flex sm:flex-col h-full sm:items-center gap-y-8 mt-6 gap-x-2 '>
           {
-            NFTs.length && NFTs.map( (nft,i) => {
-              return (
-                <NFTCard nft={nft} key={'nftcard'+i} cardView={cardView}></NFTCard>
-              )
-            })
+            // (viewPage.length>0) ?
+            //   viewPage.map( (nft,i) => {
+            //   return (
+            //     <NFTCard nft={nft} key={'nftpage'+i}></NFTCard>
+            //   )
+            // })
+            (viewIndex>0) ?
+              
+              viewPage.map( (nft,i) => {
+                if(i<viewIndex || i >= viewIndex+viewNum){ return }
+                else {
+                  return (
+                    <NFTCard nft={nft} key={'nftpage'+i}></NFTCard>
+                  )
+                }
+              })            
+
+
+            :
+              NFTs.length && NFTs.map( (nft,i) => {
+                return (
+                  <NFTCard nft={nft} key={'nftcard'+i}></NFTCard>
+                )
+              })
+            
           }
         </div>
 
@@ -171,11 +224,22 @@ const Home = (foo) => {
       </main>
       <footer className="h-12 bg-blue-500 flex justify-center py-2 border-t-4 border-t-black">{/*Footer*/}
         <div className="flex items-center space-x-1">
-          <a href="#" className="px-4 py-2 text-gray-500 bg-gray-300 rounded-md  hover:bg-blue-400 hover:text-white">
+          {/* <a href="#" className="px-4 py-2 text-gray-500 bg-gray-300 rounded-md  hover:bg-blue-400 hover:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
               </svg>
-          </a>
+          </a> */}
+
+          <button className={"disabled:bg-slate-500 px-4 py-2 text-gray-500 bg-gray-300 rounded-md  hover:bg-blue-400 hover:text-white"} 
+          onClick={ ()=>{ 
+            debugger;
+            updateViewSet(viewIndex+=viewNum) 
+          }
+          }>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+              </svg>
+          </button>
 
           {/* <a href="#" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">
               1

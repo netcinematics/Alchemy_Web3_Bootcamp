@@ -40,13 +40,18 @@ x - https://v1.tailwindcss.com/components/cards#stacked
 x - IMPROVEMENT: add flex-1 and self-auto to the CARD. with items-stretch Tricky.
 
 # NEED BETTER DATA - for Carousel-Pagination and for WEB3NFTBOOK!
-o - TESTNET: switch to POLYGON MUMBAI TESTNET!
-o - NEXT.js.localenv ?
-o - DEPLOY VERCEL
-o - CREATE NEW BOOK - for TESTNET Polygon...
-o - CAROUSEL load/click behavior.
+x - TESTNET: switch to POLYGON MUMBAI TESTNET!
+x - NEXT.js.localenv ?
+x - CAROUSEL load/click behavior.
 
 # I've been on Alchemy for over 1yr already! Looking back, days on Alchemy 467!
+
+o - DEPLOY VERCEL
+o - CREATE NEW BOOK - for TESTNET Polygon...
+
+o - GALLERY INTERACTION EXAMPLE:
+https://beta.reactjs.org/learn/adding-interactivity
+
 
 >npm install alchemy-sdk //suggested by dashboard.
 
