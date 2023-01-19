@@ -2,22 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css';
 import GalleryBook from './NFTBookGallery';
+import NavBooks from '../components/NavBooks';
 
 export default function Home() {
   return (
     <div className={styles.container}>
 
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About Us</Link>
-      </li>
-      <li>
-        <Link href="/blog/hello-world">Blog Post</Link>
-      </li>
-    </ul>
+      <NavBooks />
 
 
       <GalleryBook />
