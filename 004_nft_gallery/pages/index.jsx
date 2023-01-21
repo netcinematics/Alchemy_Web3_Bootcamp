@@ -3,6 +3,8 @@
 // import Image from 'next/image'
 import { NFTCard } from "../components/nftCard"
 import { useState } from 'react'
+// import GalleryBook from '../components/NFTBookGallery';
+import NavBooks from '../components/NavBooks';
 
 
 // You need to export an object to set up your config
@@ -20,7 +22,6 @@ const Home = (foo) => {
   const [NFTs, setNFTs] = useState([]);
   // let NFTs = []; 
   // const setNFTs = (nftz) => {
-  //   debugger;
   //   NFTs = nftz;
   // }
   const [fetchForCollection, setFetchForCollection]=useState(false);
@@ -31,7 +32,6 @@ const Home = (foo) => {
   const [viewPage, setPage] = useState([]); //items to view
 
   const updateViewSet = (newIndex) => {
-    debugger;
     if(!NFTs.length){ return }
     if(newIndex<0){viewIndex = 0}
     else if (newIndex >= NFTs.length){ 
@@ -50,7 +50,6 @@ const Home = (foo) => {
 
 
   const fetchNFTsPolygon = async() => {
-    debugger; 
     // const aKey = process.env.NEXT_PUBLIC_ANALYTICS_ID;
     // const PRIVATE_KEY = process.env.PRIVATE_KEY;
     // networks: {
@@ -95,7 +94,6 @@ const Home = (foo) => {
   }
 
   const fetchNFTs = async() => {
-    // debugger;
     let nfts; 
     console.log("fetching nfts");
     const api_key = "A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM"
@@ -119,7 +117,6 @@ const Home = (foo) => {
   
     if (nfts) {
       console.log("nfts:", nfts)
-      // debugger;
       setNFTs(nfts.ownedNfts)
       console.log("teststate1",NFTs.length)
       setTimeout(function(){ updateViewSet(0)},100);
@@ -127,7 +124,6 @@ const Home = (foo) => {
   }
 
   const fetchNFTsForCollection = async () => {
-    debugger;
     // if (collection.length) {
       // const collection = '0xd90d4db4966ecb520847e0723908427c2a7a4622';//polygon rarbl sonic
       // const collection = '0x495f947276749Ce646f68AC8c248420045cb7b5e'; //OS cozmo
@@ -151,41 +147,53 @@ const Home = (foo) => {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden justify-between bg-black">
-    <header className="h-15 bg-black ">{/* PAGE Header */}
-    <div className="flex w-full justify-center sm:items-center gap-x-2">{/*BUTTON-FRAME*/}
-          {/* <input disabled={fetchForCollection} type={"text"} placeholder="Add your wallet address"></input>
-          <input type={"text"} placeholder="Add the collection address"></input>
-          <label className="text-gray-600 "><input onChange={(e)=>{setFetchForCollection(e.target.checked)}} type={"checkbox"} className="mr-2"></input>Fetch for collection</label>
-          <button className={"disabled:bg-slate-500 text-blue bg-blue-400 px-4 py-2 mt-3 rounded-sm w-1/5"} onClick={
-            () => {
-              console.log("click",fetchForCollection)
-              if (fetchForCollection) {
-                fetchNFTsForCollection()
-              } else { fetchNFTs() }
-            }
-          }>Let's go! </button> */}
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
-            () => { fetchNFTsForCollection(); }
-          }>NFT~BOOKS</button>
 
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
-          onClick={ ()=>{ fetchNFTs() }
-          }>LAST~BOOK</button>
 
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
-          onClick={ ()=>{ fetchNFTsPolygon() }
-          }>NEXT~BOOK</button>
 
-          <input className={"rounded-md pl-4 h-10 mt-4"} disabled={fetchForCollection} type={"text"} placeholder="load wallet or collection"></input>
+      {/* <NavBooks /> */}
+      {/* <GalleryBook /> */}
 
-          <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
-          onClick={ ()=>{ fetchNFTs() }
-          }>LOAD~BOOK</button>
+      {/* // <div style={{color: 'steelblue'}}>
+        // <ul> 
+        // <li>
+        // <Link href="/">Home</Link>
+        // </li>
+        // <li>
+        // <Link href="/book1">BOOK 1</Link>
+        // </li>
+        // <li>
+        // <Link href="/blog/hello-world">...</Link>
+        // </li>
+        // </ul>
+        // </div> */}
+        <header className="h-15 bg-black ">{/* PAGE Header */}
+        <div className="flex w-full justify-center sm:items-center gap-x-2">{/*BUTTON-FRAME*/}
+ 
+           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} onClick={
+             () => { fetchNFTsForCollection(); }
+           }>NFT~BOOKS</button>
+ 
+           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
+           onClick={ ()=>{ fetchNFTs(); }
+           }>LAST~BOOK</button>
+ 
+           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
+           onClick={ ()=>{ fetchNFTsPolygon(); }
+           }>NEXT~BOOK</button>
+ 
+           <input className={"rounded-md pl-4 h-10 mt-4"} disabled={true} type={"text"} placeholder="load wallet or collection"></input>
+ 
+           <button className={"disabled:bg-slate-500 w-44 rounded-md text-blue bg-blue-400 px-4 py-2 mt-4 rounded-sm w-1/5"} 
+           onClick={ ()=>{  }
+           }>LOAD~BOOK</button>
+ 
+         </div>
+     </header>
 
-        </div>
 
-    </header>
-    <main className="mb-auto h-10 bg-black h-full overflow-auto">{/*Content:*/}
+
+
+    <main className="mb-auto bg-black h-full overflow-auto">{/*Content:*/}
       
       <div className="flex flex-col h-full items-center justify-center gap-y-3 bg-black">
              {/*CARD-FRAME*/} {/*overflow-x-scroll*/}
@@ -232,7 +240,6 @@ const Home = (foo) => {
 
           <button className={"disabled:bg-slate-500 px-4 py-2 text-gray-500 bg-gray-300 rounded-md  hover:bg-blue-400 hover:text-white"} 
           onClick={ ()=>{ 
-            debugger;
             updateViewSet(viewIndex+=viewNum) 
           }
           }>
@@ -266,7 +273,7 @@ const Home = (foo) => {
 Home.getInitialProps = async (ctx) => {
   // FRONT-LOAD with CONTENT.
   const data = "hullowurld"; //await User.findOne(ctx.query.id)
-  console.log('init1')
+  console.log('init index')
   // return props
   return {
       data

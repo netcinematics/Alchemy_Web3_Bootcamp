@@ -11,7 +11,7 @@
 
 > also > cd nameoftheproject && code .
 
-> npm install dotenv //(?)
+> npm install dotenv //(?) no. Next.js changed to .local.env
 
 CHALLENGES:
 
@@ -49,19 +49,21 @@ x - CAROUSEL load/click behavior.
 x - https://beta.reactjs.org/learn/adding-interactivity
 x - CUSTOM COMPONENT: Next.js - gallery navigation.
 x - DEEPDIVE: Next.js Routing and React LINK pages.
-x - POC - separate sandbox to TEST behavior.
+x - POC | SANDBOX: TEST NAV/PAGE/CARD behavior.
 x - added loop around index capability.
+x - NAV COMPONENT - tricky, bubble up state.
+x - APIManager: factory method style, state update.
+o - split out to separate (clean) project "CRYPTOBOOKZ"
 o - DEPLOY VERCEL
 o - CREATE NEW BOOK - for TESTNET Polygon...
 
-o - 
 
 >npm install alchemy-sdk //suggested by dashboard.
 
 
 
 
-EXTRA-CREDIT:
+EXTRA-CREDIT-DEEPDIVE:
 https://nextjs.org/learn/basics/create-nextjs-app
 
 # Next.js + Tailwind CSS Example

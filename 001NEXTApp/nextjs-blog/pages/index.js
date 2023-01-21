@@ -10,8 +10,7 @@ export default function Home() {
 
       <NavBooks />
 
-
-      <GalleryBook />
+       <GalleryBook /> 
 
       <Head>
         <title>Create Next App</title>
@@ -24,7 +23,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          This is a portfolio for <code>spazefalcon!</code>
         </p>
 
         <div className={styles.grid}>
