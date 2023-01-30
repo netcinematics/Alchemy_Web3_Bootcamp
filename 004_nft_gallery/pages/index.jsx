@@ -67,7 +67,7 @@ const Home = (foo) => {
     //const baseURL = 'https://eth-mainnet.g.alchemy.com/v2/A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM/getNFTs/?owner=0x46f3397433384F2E31262596642C811929d6c069';
     // const baseURL = `https://eth-mainnet.g.alchemy.com/v2/${api_key}/getNFTs/`;
     // const baseURL = `${process.env.TESTNET_RPC}/getNFTs/`;
-    const fetchURL = `${process.env.NEXT_PUBLIC_POLYGON_MAIN_NFTS}`;
+    const fetchURL = `${process.env.POLYGON_MAIN_NFTS}`;
     var requestOptions = {
         method: 'GET'
       };
@@ -96,7 +96,7 @@ const Home = (foo) => {
   const fetchNFTs = async() => {
     let nfts; 
     console.log("fetching nfts");
-    const api_key = "A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM"
+    const api_key = "A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM" //au publickey
     //const baseURL = 'https://eth-mainnet.g.alchemy.com/v2/A8A1Oo_UTB9IN5oNHfAc2tAxdR4UVwfM/getNFTs/?owner=0x46f3397433384F2E31262596642C811929d6c069';
     const baseURL = `https://eth-mainnet.g.alchemy.com/v2/${api_key}/getNFTs/`;
     var requestOptions = {

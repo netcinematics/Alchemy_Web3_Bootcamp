@@ -53,9 +53,10 @@ x - POC | SANDBOX: TEST NAV/PAGE/CARD behavior.
 x - added loop around index capability.
 x - NAV COMPONENT - tricky, bubble up state.
 x - APIManager: factory method style, state update.
-o - split out to separate (clean) project "CRYPTOBOOKZ"
+x - split out to separate (clean) project "CRYPTOBOOKZ"
+x - REACT useEffect to auto load from POLYGON
 o - DEPLOY VERCEL
-o - CREATE NEW BOOK - for TESTNET Polygon...
+o - Load Cozmobotz? - from mainnet...
 
 
 >npm install alchemy-sdk //suggested by dashboard.
