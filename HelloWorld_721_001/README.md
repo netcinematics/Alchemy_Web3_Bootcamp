@@ -1,4 +1,4 @@
-# MINIMUM WEB3 | Client to GUI!
+# MINIMUM WEB3 | Client to GUI! AU_HELLO WORLD
 
 Derived from Alchemy University:
 https://docs.alchemy.com/docs/how-to-develop-an-nft-smart-contract-erc721-with-alchemy
